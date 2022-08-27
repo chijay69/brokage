@@ -61,10 +61,15 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user is not None and user.verify_password(form.password.data):
             login_user(user, form.remember_me.data)
-            next = request.args.get('next')
-            if next is None or not next.startswith('/'):
-                next = url_for('main.user', name=current_user.first_name)
-            return redirect(next)
+            if 'next' not in request.form:
+                next_url = url_for('main.user', name=current_user.first_name)
+
+            else:
+                if request.form['next'] == '':
+                    next_url = url_for('main.user', name=current_user.first_name)
+                else:
+                    next_url = request.form['next']
+            return redirect(next_url)
         flash('Invalid username or password.')
     return render_template('auth/login.html', form=form)
 
@@ -73,8 +78,16 @@ def login():
 @login_required
 def logout():
     logout_user()
-    flash('You have been logged out.')
-    return redirect(url_for('main.index'))
+    flash("Successfully logged out")
+
+    if 'next' not in request.args:
+        next_url = url_for('main.index')
+    else:
+        if request.args.get('next') == '':
+            next_url = url_for('main.index')
+        else:
+            next_url = request.args.get('next')
+    return redirect(next_url)
 
 
 @auth.route('/confirm/<token>')

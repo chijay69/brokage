@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, IntegerField, SubmitField, BooleanField, SelectField
 from wtforms.validators import Email, DataRequired, Length, ValidationError, EqualTo
-
+from wtforms.widgets import HiddenInput
 from app.models import User
 
 
@@ -23,6 +23,7 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm):
+    next = StringField('next', widget=HiddenInput())
     email = StringField('Your Email', validators=[DataRequired(), Length(1, 64)])
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('keep me logged in')

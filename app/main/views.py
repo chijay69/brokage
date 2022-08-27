@@ -525,6 +525,12 @@ def myfxbook_autotrade():
 
 
 #    return render_template('main/global/en/forex-trading-platform/myfxbook-autotrade.html')
+#
+# @main.route('/user')
+# def user(name):
+#     user = User.query.filter_by(first_name=current_user.first_name).first_or_404()
+#     all_users = User.query.all()
+#     return render_template('main/dashboard.html', user=user, all_users=all_users)
 
 
 @main.route('/user/<name>')

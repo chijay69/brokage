@@ -1452,6 +1452,9 @@ body.top-banner .single-top.affix {
 							<form method="post" style="display:inline-block; margin-left:auto; margin-right:auto; text-align:left;">
 								{{ form.hidden_tag() }}
 								<!-- Input Field Starts -->
+                                <div class="form-group">
+                                    {{ form.next(value="{{ request.args.get('next', '') }}", type="hidden") }}
+                                </div>
 								<div class="form-group">
 									{{ form.email(class="form-control", placeholder="EMAIL") }}
 								</div>
