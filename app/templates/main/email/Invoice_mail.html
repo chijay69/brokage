@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .container-fluid {
+        padding-top:20px;
+        padding-bottom:20px;
+        padding-right:1%;
+        padding-left:1%;
+        background-color:white;
+        }
+        .title {
+            text-align:right;
+            font: small-caps bold 54px/1 sans-serif;
+        }
+        .flow {
+            margin-bottom:30px;
+            padding:5px 0px;
+        }
+        .info {
+            margin-top:10px;
+        }
+        .right{
+            padding-left:1%;
+        }
+        .heading {
+            font-weight:bold;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            margin: 5px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,.styled-table td {
+            padding: 2px 5px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        i {
+            font-size:1.2rem;
+            color:green;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+<header class="flow">
+    <section class="container">
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-sm-6"><img src="{{ url_for('static', filename='img/logo.png' ) }}" alt="LOGO"></div>
+            <div class="col-sm-6 title"><h3 class="title"> INVOICE</h3></div>
+        </div>
+    </div>
+    </section>
+</header>
+<section class="flow">
+    <div class="container info">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="h1"> TokenVault Ltd. </p>
+            </div>
+            <div class="col-sm-6">
+                <span class="container"><p style="display:inline;" class="h5">Invoice ID:</p><span class="right">#{{ user.your_var }}</span></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                Sender: TokenVault Admin
+            </div>
+            <div class="col-sm-6">
+                <p class="container"><p style="display:inline;" class="h5">Due date:</p><span id="time" class="right">{{ user.date }}</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                Contact: support@tokenvault.online
+            </div>
+            <div class="col-sm-6">
+                <span class="container"><p style="display:inline;" class="h5">Currency:</p><span class="right">USD</span></span>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</section>
+<section class="flow">
+    <div class="container info">
+        <div class="heading">
+            <h1>Bill To</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ user.last_name }} {{ user.first_name }}
+            </div>
+            <div class="col-sm-6">
+                <span class="container"><p style="display:inline;" class="h5">Transaction ID:</p><span class="right">#{{ user.my_var }}</span></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ user.email }}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="flow">
+    <div class="container info">
+        <div class="row">
+            <table class="styled-table col col-sm col-md col-lg">
+                <thead>
+                    <tr>
+                        <th> Description </th>
+                        <th> Price </th>
+                        <th> Quantity </th>
+                        <th> Amount </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ user.description }}</td>
+                        <td><i class="fas fa-dollar-sign"></i> ${{ user.amount }}</td>
+                        <td> 1 </td>
+                        <td><i class="fas fa-dollar-sign"></i> ${{ user.amount }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<footer>
+    <section class="flow">
+    <div class="container info">
+        <div class="row">
+            <div class="col-sm-6">
+                Note to recipient unavailable
+            </div>
+            <div class="col-sm-6">
+                <span class="container"><p style="display:inline;" class="h5">Total :</p><span class="right"><i class="fas fa-dollar-sign" style="color:black"> ${{ user.amount }}</i></span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    const date = new Date();
+    const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
+    document.getElementById("time").innerHTML = [month + '/' + day + '/' + year];
+</script>
+</body>
+</html>

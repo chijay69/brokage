@@ -1,0 +1,74 @@
+/* ICM Primary values from UX design */
+/* Width - container, element, card, */
+/* Margin */
+/* padding */
+/* Border */
+/*
+  Roboto font related weights
+   https://fonts.google.com/specimen/Roboto?selection.family=Roboto:100,300,400,500,700,900
+*/
+/* font color, background color */
+/* UI elements specific color */
+/* Card specific color */
+/* max width properties for UI Cards for different number of cards in a container */
+/* one are more cards */
+/* three are more cards */
+i[x] {
+  display: none !important; }
+
+@media only screen and (max-width: 760px) {
+  .single-page.page-live article.page-register.page-content-container .page-content {
+    padding-top: 40px !important; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page h1.h1-big {
+      font-size: 18px !important;
+      font-weight: bold; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .wp-icm-open-account .process_line .step_line .step_icon {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .wp-icm-open-account .register_wrap {
+      border-radius: 0px;
+      box-shadow: none; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .wp-icm-open-account .register_form_wrap form {
+      padding: 0 0px; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .wp-icm-open-account .register_form_wrap {
+      padding: 0px;
+      margin-top: 0px; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page h1.reg_title {
+      margin-bottom: 40px !important; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .steps_container.wp-icm-open-account {
+      height: 58px; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page .signup-buttons-header {
+      font-size: 16px;
+      font-weight: bold; }
+    .single-page.page-live article.page-register.page-content-container .page-content .page-section.landing-page #google-button .abcRioButton {
+      width: 116px !important; }
+  .single-page.page-live
+article.page-register.page-content-container
+h1.reg_title,
+  .single-page.page-live
+article.page-register.page-content-container
+.input_group_title
+h1 {
+    font-size: 16px !important;
+    font-weight: bold !important; } }
+
+.single-page.page-indices .page-header {
+  background: url(../../assets/img/single_market_page/banner1.png) no-repeat center right; }
+
+.single-page.page-indices .page-first-text::before {
+  background: url(https://www.icmarkets.com/assets/img/single_market_page/icon-indices.svg) center center no-repeat transparent; }
+
+.single-page.page-indices .risk-image {
+  background: url(../../assets/img/single_market_page/indicesImg.png) center center no-repeat transparent;
+  background-size: contain; }
+
+.single-page.page-indices .market-facts-card .facts-item::before {
+  color: #34E834; }
+
+.single-page.page-indices .market-facts-card .action-button {
+  background: #34E834; }
+
+@media screen and (max-width: 640px) {
+  .single-page.page-indices .single-design-table .table-row {
+    height: 150px !important; } }

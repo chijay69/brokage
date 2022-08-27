@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.google.com	TRUE	/	FALSE	1999999999	NID	223=mftSfO-f0Mq0FhRcn3Dqe5-Gyr307zRfyeepmDChI-a7ipFC9NF-lOG-8lOiTLwtOFi4zgXcS3SYEKfOk39MJxzcP16rIMO66V2thB2VTBMp6wcVPxng06QI0Xo5ukaRwBnVj0nPmW1UD7BzWiY_aK81D_NF_0jVvDGgRyPvpW0
+.icmarkets.com	TRUE	/	FALSE	1999999999	camp	1331
+.icmarkets.com	TRUE	/	FALSE	1999999999	camp_click	1331
+www.icmarkets.com	TRUE	/	FALSE	1999999999	user_want_language	en
+

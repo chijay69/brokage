@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- CSS Reset : BEGIN -->
+<style>
+html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #38aa58;
+}
+.email_container {
+    background: #38aa58;
+    margin: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    border: 5px solid #38aa58;
+}
+.first, .second, .third, .fourth{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 96%;
+    border-bottom: 1px solid #38aa58;
+    color: #38aa58;
+    background-color: #16161e;
+}
+.second, .fourth{
+    margin-top: 20px;
+}
+.second{
+    background-image: url("./images/candlestick.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+.fourth {
+    padding-top: 10px;
+    flex-flow: column nowrap;
+}
+.fourth tbody {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items:baseline;
+}
+tfoot{
+    border-top: 1px solid #38aa58;
+}
+button {
+    background-color: #38aa58;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+p {
+    font-family:'Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif';
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration-style: none;
+}
+.navigation {
+    padding: 0;
+    margin: 0;
+}
+.navigation li {
+    list-style: none;
+	display: inline-block;
+	margin: 5px 0px;
+	/* font-size: 13px;
+	font-weight: 500 */
+}
+.navigation li {
+    padding-right: 2px;
+}
+.navigation li:last-child {
+    padding-right: 0px;
+}
+.navigation li a, .foot li a {
+    text-decoration: none;
+    color: #38aa58;
+}
+/* button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+} */
+.foot, .foot ul {
+    padding: 4px 10px;
+    margin: 0;
+    text-align: center;
+
+}
+.foot li {
+    list-style: none;
+    font-size: 0.75rem;
+}
+
+/* CSS */
+.button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(35, 34, 27, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2c974b;
+}
+
+.button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+</style>
+</head>
+<body>
+    <div class="email_container">
+        <table  align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tbody>
+                <tr class="first">
+                    <td>
+                        <img width="100px" height="auto" src="https://user-images.githubusercontent.com/63748646/178206625-3d407b52-6703-491d-9fef-0a87e98cf2b3.png" alt="logo"/>
+                    </td>
+                    <td>
+                        <ul class="navigation">
+                            <li><a href="https://www.tokenvault.online/">Home</a></li>
+                            <li><a href="https://www.tokenvault.online/funding"></a>Funding</li>
+                            <li><a href="https://www.tokenvault.online/spreads">Pricing</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="second" align="center" role="presentation" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <img style="width: 96%; height:auto; margin: 20px auto 0px;" src="https://user-images.githubusercontent.com/63748646/178206622-3d58b646-781d-493b-8fa8-21c64447ff3d.jpg" alt="Header image" />
+                </tr>
+            </tbody>
+        </table>
+        <table class="third" align="center" role="presentation" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td>
+                    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h2>
+                                        Welcome to Tokenvault <h5>{{ user.fname | default("Mr", true)  }}</h5>
+                                    </h2>
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="max-width:40rem; height:auto; text-align:center;">
+                                    <p>
+                                        Your World Of Trading Awaits
+                                        We’re so glad you’re here! You are now part of a growing community of Traders creating, collaborating, and connecting across the globe via TokenVault's Tools.
+                                    </p>
+                                    <p>Kindly click the button below to confirm your account</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <a href="https://www.tokenvault.online/"><button class="button" role="button">Lets Get Started</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="fourth" role="presentation" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="foot">
+                        <ul>
+                            <li><a href="https://www.tokenvault.online/overview">Accounts Overview</a></li>
+                            <li><a href="https://www.tokenvault.online/legal_documents">Legal Documents</a></li>
+                            <li><a href="https://www.tokenvault.online/contact">Contact Us</a></li>
+                            <li><a href="https://www.tokenvault.online/about_tokenvault">About Us</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="foot">
+                        <ul>
+                            <li><a href="https://www.tokenvault.online/regulation">Regulation</a></li>
+                            <li><a href="https://www.tokenvault.online/help_centre">Help center</a></li>
+                            <li><a href="https://www.tokenvault.online/trading_hours">Trading Hours</a></li>
+                            <li><a href="https://www.tokenvault.online/why_tokenvault">Why TokenVault</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <p style="text-align: justify; padding: 10px; font-size: 0.5rem;">
+                            Raw Trading Ltd registered in Seychelles with registration number: 8419879-2,
+                            is regulated by the Financial Services Authority of Seychelles with License number: SD018.
+                            Other entities of the group include:
+                            International Capital Markets Pty Ltd with registration number 123 289 109,
+                            is regulated by the Australian Securities and Investments Commission with License No. 335692.
+                            TokenVault (EU) Ltd is a limited company registered in Cyprus and is regulated by the Cyprus
+                            Securities and Exchange Commission with License No. 362/18.
+                            TokenVault Ltd, registered in The Bahamas with registration number 76823 C,
+                            is regulated by the Securities Commission of The Bahamas with License No. SIA-F214.
+                        </p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
